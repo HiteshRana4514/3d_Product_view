@@ -1,0 +1,61 @@
+.texturePanel {
+  margin-bottom: 2rem;
+  background-color: white;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.texturePanel h3 {
+  margin-bottom: 1rem;
+  color: #333;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.colorGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.colorOption {
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 4px;
+  cursor: pointer;
+  border: 2px solid #e0e0e0;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.colorOption:hover {
+  transform: scale(1.05);
+  border-color: #666;
+}
+
+.colorOption.selected {
+  border-color: #333;
+  box-shadow: 0 0 0 2px #333;
+}
+
+@media screen and (max-width: 1200px) {
+  .colorGrid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .texturePanel {
+    margin-bottom: 1.5rem;
+    padding: 0.75rem;
+  }
+
+  .colorGrid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+  }
+}
